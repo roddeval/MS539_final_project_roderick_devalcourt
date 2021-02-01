@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS539_final_project_roderick_devalcourt", "MS539_final_project_roderick_devalcourt\MS539_final_project_roderick_devalcourt.csproj", "{E2FC0F7F-CCEC-419B-91F4-BC724C158DFA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15A139E0-443E-4475-92FC-869D31EC0B65}"
+	ProjectSection(SolutionItems) = preProject
+		MS539_final_project_proposal_roderick_devalcourt.docx = MS539_final_project_proposal_roderick_devalcourt.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
