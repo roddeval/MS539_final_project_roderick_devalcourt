@@ -5,14 +5,14 @@
 Estimate: 40 hours of work
 
 Date            hours of work       Description
-1/31/2021                           setup solution
-1/31/2021                           mainWindowForm.cs
-1/31/2021                           personallyIdentifiableInformationForm.cs
-1/31/2021                           bloodGlucoseChartForm.cs
-1/31/2021                           bloodGlucoseForm.cs
-1/31/2021                           pulseAndOxygenChartForm.cs
-1/31/2021                           pulseAndOxygenForm.cs
-1/31/2021                           aboutForm.cs
+1/31/2021       1                   setup solution
+1/31/2021       .50                 mainWindowForm.cs
+1/31/2021       .50                 personallyIdentifiableInformationForm.cs
+1/31/2021       .50                 bloodGlucoseChartForm.cs
+1/31/2021       .50                 bloodGlucoseForm.cs
+1/31/2021       .50                 pulseAndOxygenChartForm.cs
+1/31/2021       .50                 pulseAndOxygenForm.cs
+1/31/2021       .25                 aboutForm.cs
 
  */
 using System;
