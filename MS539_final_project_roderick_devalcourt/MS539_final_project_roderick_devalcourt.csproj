@@ -64,6 +64,12 @@
     <Compile Include="bloodGlucoseForm.Designer.cs">
       <DependentUpon>bloodGlucoseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="bloodGlucoseForm.resx">
       <DependentUpon>bloodGlucoseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainWindowForm.resx">
       <DependentUpon>mainWindowForm.cs</DependentUpon>

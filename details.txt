@@ -1,0 +1,19 @@
+MS539 Final Project <<incremental>>
+
+Health Information Tracker
+
+Health Information Tracker will provide a GUI interface to allow a user to save
+various health information data points.  These data points will drive the charts
+you see on some of the screens.
+
+The health information this program will collect and display are:
+
+1.	Personally Identifiable Information
+2.	Blood Glucose readings
+3.	Pulse and Oxygen % readings
+
+github repository
+https://github.com/roddeval/MS539_final_project_roderick_devalcourt
+
+youtube video portion of the assignment
+https://youtu.be/v41iMu-GYwo
