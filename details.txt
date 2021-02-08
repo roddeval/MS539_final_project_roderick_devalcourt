@@ -12,8 +12,11 @@ The health information this program will collect and display are:
 2.	Blood Glucose readings
 3.	Pulse and Oxygen % readings
 
-github repository
-https://github.com/roddeval/MS539_final_project_roderick_devalcourt
 
 youtube video portion of the assignment
-https://youtu.be/v41iMu-GYwo
+https://youtu.be/c2lJ8Faz9yM
+
+Github link:
+
+https://github.com/roddeval/MS539_final_project_roderick_devalcourt/tree/feb_7_2021_branch
+
