@@ -12,6 +12,13 @@ The health information this program will collect and display are:
 2.	Blood Glucose readings
 3.	Pulse and Oxygen % readings
 
+2/7/2021
+Overview:
+Some of the things you should be considering include:
+
+Arrays
+Lists
+Utilize at least 3 string functions
 
 youtube video portion of the assignment
 https://youtu.be/c2lJ8Faz9yM
