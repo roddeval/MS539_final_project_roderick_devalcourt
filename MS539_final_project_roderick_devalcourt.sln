@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS539_final_project_roderic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15A139E0-443E-4475-92FC-869D31EC0B65}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\temp\HealthInformationTracker.txt = ..\..\..\..\..\temp\HealthInformationTracker.txt
 		MS539_final_project_proposal_roderick_devalcourt.docx = MS539_final_project_proposal_roderick_devalcourt.docx
 	EndProjectSection
 EndProject

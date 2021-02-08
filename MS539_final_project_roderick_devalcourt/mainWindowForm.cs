@@ -6,14 +6,22 @@ Estimate: 40 hours of work
 
 Date            hours of work       Description
 1/31/2021       1                   setup solution
-1/31/2021       .50                 mainWindowForm.cs
-1/31/2021       .50                 personallyIdentifiableInformationForm.cs
-1/31/2021       .50                 bloodGlucoseChartForm.cs
-1/31/2021       .50                 bloodGlucoseForm.cs
-1/31/2021       .50                 pulseAndOxygenChartForm.cs
-1/31/2021       .50                 pulseAndOxygenForm.cs
-1/31/2021       .25                 aboutForm.cs
+1/31/2021       0.50                mainWindowForm.cs
+1/31/2021       0.50                personallyIdentifiableInformationForm.cs
+1/31/2021       0.50                bloodGlucoseChartForm.cs
+1/31/2021       0.50                bloodGlucoseForm.cs
+1/31/2021       0.50                pulseAndOxygenChartForm.cs
+1/31/2021       0.50                pulseAndOxygenForm.cs
+1/31/2021       0.25                aboutForm.cs
 
+2/7/2021        0.50                Identifier.cs
+2/7/2021        0.50                PersonallyIdentifiableInformation.cs
+2/7/2021        0.50                PulseAndOxygen.cs
+2/7/2021        0.50                BloodGlucose.cs
+2/7/2021        1.5                 ConvertLogic.cs
+2/7/2021        1.5                 ReadFileLogic.cs
+2/7/2021        1.5                 frmTestReadFileLogic.cs
+2/7/2021        0.25                HealthInformationTracker.txt
  */
 using System;
 using System.Collections.Generic;
