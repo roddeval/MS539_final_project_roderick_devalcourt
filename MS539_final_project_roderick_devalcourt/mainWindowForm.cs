@@ -64,5 +64,11 @@ namespace MS539_final_project_roderick_devalcourt
             dlg.ShowDialog(this);
 
         }
+
+        private void testReadFileLogicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTestReadFileLogic dlg = new frmTestReadFileLogic();
+            dlg.ShowDialog(this);
+        }
     }
 }
