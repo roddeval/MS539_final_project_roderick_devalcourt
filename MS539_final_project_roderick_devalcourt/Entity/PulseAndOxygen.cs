@@ -12,6 +12,13 @@ namespace MS539_final_project_roderick_devalcourt.Entity
         {
             Initialize();
         }
+
+        public PulseAndOxygen(PulseAndOxygen pulseAndOxygen)
+        {
+            Initialize();
+            Copy(pulseAndOxygen);
+        }
+
         public new void Initialize()
         {
             base.Initialize();

@@ -208,6 +208,30 @@ namespace MS539_final_project_roderick_devalcourt.Logic
             return result;
         }
 
+        public static string ConvertPersonallyIdentifiableInformationToString(PersonallyIdentifiableInformation personallyIdentifiableInformation,char delim)
+        {
+            string result = "";
+            StringBuilder sb = null;
+            if (personallyIdentifiableInformation != null)
+            {
+
+                sb = new StringBuilder();
+                sb.Append(personallyIdentifiableInformation.Type);
+                sb.Append(delim);
+                sb.Append(personallyIdentifiableInformation.Id.ToString());
+                sb.Append(delim);
+                sb.Append(personallyIdentifiableInformation.FirstName);
+                sb.Append(delim);
+                sb.Append(personallyIdentifiableInformation.LastName);
+                sb.Append(delim);
+                sb.Append(personallyIdentifiableInformation.DateOfBirth.ToString("MM/dd/yyyy"));
+                sb.Append(delim);
+                sb.Append(personallyIdentifiableInformation.Gender);
+                result = sb.ToString();
+            }
+            return result;
+        }
+
         public static string ConvertBloodGlucoseToString(BloodGlucose bloodGlucose)
         {
             string result = "";
@@ -231,6 +255,30 @@ namespace MS539_final_project_roderick_devalcourt.Logic
                 sb.Append(bloodGlucose.DateRead.ToString("MM/dd/yyyy"));
                 sb.Append(" ");
                 sb.Append("TimeRead:");
+                sb.Append(bloodGlucose.TimeRead.ToString("HH:mm:ss tt"));
+                result = sb.ToString();
+
+            }
+            return result;
+        }
+
+        public static string ConvertBloodGlucoseToString(BloodGlucose bloodGlucose, char delim)
+        {
+            string result = "";
+            StringBuilder sb = null;
+            if (bloodGlucose != null)
+            {
+                sb = new StringBuilder();
+                sb.Append(bloodGlucose.Type);
+                sb.Append(delim);
+                sb.Append(bloodGlucose.Id.ToString());
+                sb.Append(delim);
+                sb.Append(bloodGlucose.PII_ID.ToString());
+                sb.Append(delim);
+                sb.Append(bloodGlucose.MGDL.ToString());
+                sb.Append(delim);
+                sb.Append(bloodGlucose.DateRead.ToString("MM/dd/yyyy"));
+                sb.Append(delim);
                 sb.Append(bloodGlucose.TimeRead.ToString("HH:mm:ss tt"));
                 result = sb.ToString();
 
@@ -270,6 +318,30 @@ namespace MS539_final_project_roderick_devalcourt.Logic
             return result;
         }
 
+        public static string ConvertPulseAndOxygenToString(PulseAndOxygen pulseAndOxygen, char delim)
+        {
+            string result = "";
+            StringBuilder sb = null;
+            if (pulseAndOxygen != null)
+            {
+                sb = new StringBuilder();
+                sb.Append(pulseAndOxygen.Type);
+                sb.Append(delim);
+                sb.Append(pulseAndOxygen.Id.ToString());
+                sb.Append(delim);
+                sb.Append(pulseAndOxygen.PII_ID.ToString());
+                sb.Append(delim);
+                sb.Append(pulseAndOxygen.Pulse.ToString());
+                sb.Append(delim);
+                sb.Append(pulseAndOxygen.Oxygen.ToString());
+                sb.Append(delim);
+                sb.Append(pulseAndOxygen.DateRead.ToString("MM/dd/yyyy"));
+                sb.Append(delim);
+                sb.Append(pulseAndOxygen.TimeRead.ToString("HH:mm:ss tt"));
+                result = sb.ToString();
+            }
+            return result;
+        }
 
 
     }

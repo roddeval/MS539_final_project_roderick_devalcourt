@@ -80,8 +80,14 @@
     <Compile Include="frmTestReadFileLogic.Designer.cs">
       <DependentUpon>frmTestReadFileLogic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Builder.cs" />
     <Compile Include="Logic\ConvertLogic.cs" />
+    <Compile Include="Logic\EncryptedTextBuilder.cs" />
+    <Compile Include="Logic\LogicBase.cs" />
+    <Compile Include="Logic\PlainTextBuilder.cs" />
+    <Compile Include="Logic\Director.cs" />
     <Compile Include="Logic\ReadFileLogic.cs" />
+    <Compile Include="Logic\WriteFileLogic.cs" />
     <Compile Include="mainWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -35,6 +35,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnGo = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnWrite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -95,11 +96,22 @@
             this.listBox1.Size = new System.Drawing.Size(405, 290);
             this.listBox1.TabIndex = 22;
             // 
+            // btnWrite
+            // 
+            this.btnWrite.Location = new System.Drawing.Point(37, 104);
+            this.btnWrite.Name = "btnWrite";
+            this.btnWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnWrite.TabIndex = 23;
+            this.btnWrite.Text = "Write";
+            this.btnWrite.UseVisualStyleBackColor = true;
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
+            // 
             // frmTestReadFileLogic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 450);
+            this.Controls.Add(this.btnWrite);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.label2);
@@ -126,5 +138,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnWrite;
     }
 }

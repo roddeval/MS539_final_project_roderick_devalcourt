@@ -22,6 +22,18 @@ Date            hours of work       Description
 2/7/2021        1.5                 ReadFileLogic.cs
 2/7/2021        1.5                 frmTestReadFileLogic.cs
 2/7/2021        0.25                HealthInformationTracker.txt
+
+2/14/2021       1.0                 ConvertLogic.cs
+2/14/2021       1.0                 LogicBase.cs
+2/14/2021       1.0                 ReadFileLogic.cs    (refactored to use LogicBase base class)
+2/14/2021       1.0                 WriteFileLogic.cs
+2/14/2021       0.25                PersonallyIdentifiableInformation.cs (refactored, added Copy Constructor)
+                                    BloodGlucose.cs (refactored, added Copy Constructor)
+                                    Director.cs
+                                    Builder.cs
+                                    PlainTextBuilder.cs
+                                    EncryptedTextBuilder.cs
+
  */
 using System;
 using System.Collections.Generic;

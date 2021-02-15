@@ -18,7 +18,7 @@ namespace MS539_final_project_roderick_devalcourt
         {
             InitializeComponent();
         }
-
+        private LogicBase logicBase { set; get; }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string sPath = "";
@@ -63,6 +63,7 @@ namespace MS539_final_project_roderick_devalcourt
             ReadFileLogic readFileLogic = null;
             try
             {
+                logicBase = new LogicBase();
                 ResetListBox();
                 if ((string.IsNullOrEmpty(path) == false) && (string.IsNullOrEmpty(fileName) == false))
                 {
@@ -74,16 +75,22 @@ namespace MS539_final_project_roderick_devalcourt
                         readFileLogic.ReadFile();
                         messageText = ConvertLogic.ConvertPersonallyIdentifiableInformationToString(readFileLogic.personallyIdentifiableInformation);
                         listBox1.Items.Add(messageText);
+
+                        logicBase.personallyIdentifiableInformation = new PersonallyIdentifiableInformation(readFileLogic.personallyIdentifiableInformation);
+
                         foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucose)
                         {
                             messageText = ConvertLogic.ConvertBloodGlucoseToString(bloodGlucose);
                             listBox1.Items.Add(messageText);
+                            logicBase.listBloodGlucose.Add(new BloodGlucose(bloodGlucose));
+
                         }
 
                         foreach (PulseAndOxygen pulseAndOxygen in readFileLogic.listPulseAndOxygen)
                         {
                             messageText = ConvertLogic.ConvertPulseAndOxygenToString(pulseAndOxygen);
                             listBox1.Items.Add(messageText);
+                            logicBase.listPulseAndOxygen.Add(new PulseAndOxygen(pulseAndOxygen));
                         }
                     }
                 }
@@ -116,6 +123,70 @@ namespace MS539_final_project_roderick_devalcourt
         {
             this.tbFileName.Text = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.FileName;
             this.tbPath.Text = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.DefaultPath;
+        }
+
+        private void btnWrite_Click(object sender, EventArgs e)
+        {
+            StringBuilder stringBuilder = null;
+            string messageText = "";
+            Exception exceptionDetails = null;
+            string path = tbPath.Text;
+            string fileName = tbFileName.Text;
+            string pathFileName = "";
+            WriteFileLogic writeFileLogic = null;
+            try
+            {
+                if (logicBase != null)
+                {
+                    if ((string.IsNullOrEmpty(path) == false) && (string.IsNullOrEmpty(fileName) == false))
+                    {
+                        writeFileLogic = new WriteFileLogic();
+                        if (writeFileLogic != null)
+                        {
+                            ResetListBox();
+                            writeFileLogic.PathName = path;
+                            writeFileLogic.FileName = fileName;
+                            pathFileName = writeFileLogic.GetFormattedFileName();
+
+                            writeFileLogic.personallyIdentifiableInformation = logicBase.personallyIdentifiableInformation;
+                            writeFileLogic.listBloodGlucose = logicBase.listBloodGlucose;
+                            writeFileLogic.listPulseAndOxygen = logicBase.listPulseAndOxygen;
+
+                            this.Cursor = Cursors.WaitCursor;
+
+                            writeFileLogic.WriteFile();
+
+
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                stringBuilder = new StringBuilder();
+                exceptionDetails = exception;
+
+                while (exceptionDetails != null)
+                {
+
+                    messageText = "\r\nMessage: " + exceptionDetails.Message + "\r\nSource: " + exceptionDetails.Source + "\r\nStack Trace: " + exceptionDetails.StackTrace + "\r\n----------\r\n";
+
+                    stringBuilder.Append(messageText);
+
+                    exceptionDetails = exceptionDetails.InnerException;
+
+                }
+
+                messageText = stringBuilder.ToString();
+
+                listBox1.Items.Add(messageText);
+
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+
         }
     }
 }

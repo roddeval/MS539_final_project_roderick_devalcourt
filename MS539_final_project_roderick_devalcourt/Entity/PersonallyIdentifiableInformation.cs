@@ -12,6 +12,12 @@ namespace MS539_final_project_roderick_devalcourt.Entity
         {
             Initialize();
         }
+        public PersonallyIdentifiableInformation(PersonallyIdentifiableInformation personallyIdentifiableInformation)
+        {
+            Initialize();
+            Copy(personallyIdentifiableInformation);
+        }
+
         public new void Initialize()
         {
             base.Initialize();

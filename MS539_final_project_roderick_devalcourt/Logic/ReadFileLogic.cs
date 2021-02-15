@@ -9,68 +9,15 @@ using MS539_final_project_roderick_devalcourt.Entity;
 
 namespace MS539_final_project_roderick_devalcourt.Logic
 {
-    public class ReadFileLogic
+    public class ReadFileLogic : LogicBase
     {
 
         public ReadFileLogic()
         {
-            Initialize();
         }
 
-        public ReadFileLogic(ReadFileLogic readFileLogic)
+        public ReadFileLogic(string fName, string pName, string fPname) : base(fName,pName,fPname)
         {
-            Initialize();
-            Copy(readFileLogic);
-        }
-
-        public void Initialize()
-        {
-            this.FileName = "";
-            this.PathName = "";
-            this.FilePathName = "";
-        }
-
-        public void Copy(ReadFileLogic readFileLogic)
-        {
-            if (readFileLogic != null)
-            {
-                this.FileName = readFileLogic.FileName;
-                this.PathName = readFileLogic.PathName;
-                this.FilePathName = readFileLogic.FilePathName;
-            }
-        }
-
-        public string GetFormattedFileName()
-        {
-            string result = "";
-
-            if ((string.IsNullOrEmpty(this.PathName) == false) &&
-                (string.IsNullOrEmpty(this.FileName) == false))
-            {
-                result = PathName;
-                if (result.EndsWith("\\") == false)
-                {
-                    result += "\\";
-                }
-
-                result += this.FileName;
-
-                this.FilePathName = result;
-            }
-            else
-            {
-                this.FilePathName = "";
-            }
-
-            return this.FilePathName;
-
-        }
-
-        public void SetupLists()
-        {
-            this.personallyIdentifiableInformation = new PersonallyIdentifiableInformation();
-            this.listBloodGlucose = new List<BloodGlucose>();
-            this.listPulseAndOxygen = new List<PulseAndOxygen>();
         }
 
         public void ReadFile()
@@ -157,11 +104,5 @@ namespace MS539_final_project_roderick_devalcourt.Logic
             }
         }
 
-        public PersonallyIdentifiableInformation personallyIdentifiableInformation { set; get; }
-        public List<BloodGlucose> listBloodGlucose { set; get; }
-        public List<PulseAndOxygen> listPulseAndOxygen { set; get; }
-        public string FileName { set; get; }
-        public string PathName { set; get; }
-        public string FilePathName { set; get; }
     }
 }

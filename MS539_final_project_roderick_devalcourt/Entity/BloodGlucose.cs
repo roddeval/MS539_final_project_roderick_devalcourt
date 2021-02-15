@@ -12,6 +12,12 @@ namespace MS539_final_project_roderick_devalcourt.Entity
         {
             Initialize();
         }
+        public BloodGlucose(BloodGlucose bloodGlucose)
+        {
+            Initialize();
+            Copy(bloodGlucose);
+        }
+
         public new void Initialize()
         {
             base.Initialize();
