@@ -34,6 +34,8 @@ Date            hours of work       Description
                                     PlainTextBuilder.cs
                                     EncryptedTextBuilder.cs
 
+2/19/2021       2.50                bloodGlucoseChartForm (got a basic line chart with testdata to show)
+
  */
 using System;
 using System.Collections.Generic;
