@@ -40,6 +40,8 @@ Date            hours of work       Description
 2/21/2021       0.5                 pulseAndOxygenChartForm.cs (got a basic line chart with testdata to show)
 2/21/2021       0.25                pulseAndOxygenChartForm.cs (added group box for today, this week, this month)
 2/21/2021       0.25                bloodGlucoseChartForm.cs (added group box for today, this week, this month)
+2/21/2021       0.5                 pulseAndOxygenChartForm.cs  wrote save logic
+                                    bloodGlucoseChartForm.cs wrote save logic
 
  */
 using System;
