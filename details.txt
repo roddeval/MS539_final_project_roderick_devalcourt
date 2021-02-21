@@ -15,16 +15,35 @@ The health information this program will collect and display are:
 2/21/2021
 
 	Overview:
-	Some of the things you should be considering include:
+	The user interface is critical to the success of any software project.    
+	The goal this week is to improve your application to improve the UI.
 
-	Classes - at least 3
-	Inheritance - at least 2 inherited classes.
-	Encapsulation
-	Polymorphism
+	Guidelines:
+	Before starting any coding, write down your estimate of how long you 
+	anticipate the development of the project to take. Put this in a comment 
+	at the top of your code below the header comment (name, date, program description).  
+	Each time you work on the code, log the amount of time spent and date below the 
+	estimate.  When you have completed the project, compute the number of hours it took to 
+	complete it and note this then write a paragraph analysis on why it took longer/shorter 
+	and how you can improve for the next project.  This can be done in a Word document 
+	or as comments in your code.
+
+	Expectations:
+	Update your previous version of your final project.  Improve your UI based on your 
+	reading, research, and learning.
+
+	Deliverables:
+	You must include an executable along with all your files with the improvements listed 
+	above. Zip your project directory.
+
+	Include a word document that explains the changes made to UI and why they were made.
+
+	Please review the rubrics – this is how the assignment will be graded.
+
 
 youtube video portion of the assignment
-https://youtu.be/bjF4TcVpXIY
+https://youtu.be/gk5W-zYtlHI
 
 Github link:
-https://github.com/roddeval/MS539_final_project_roderick_devalcourt/tree/feb_14_2021_branch
+https://github.com/roddeval/MS539_final_project_roderick_devalcourt/tree/February_21_2021_branch
 
