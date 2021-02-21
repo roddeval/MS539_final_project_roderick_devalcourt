@@ -24,9 +24,43 @@ namespace MS539_final_project_roderick_devalcourt
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            string path = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.DefaultPath;
+            string fileName = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.FileName;
+            bloodGlucoseForm dlg = null;
+            BloodGlucose bloodGlucose = null;
+            WriteFileLogic writeFileLogic = null;
+            string pathFileName = "";
 
-            bloodGlucoseForm dlg = new bloodGlucoseForm();
+            dlg = new bloodGlucoseForm();
             dlg.ShowDialog(this);
+            if (dlg.DialogResult == DialogResult.OK)
+            {
+                this.Cursor = Cursors.WaitCursor;
+                //save here
+                bloodGlucose = new BloodGlucose(dlg.bloodGlucose);
+                bloodGlucose.PII_ID = readFileLogic.personallyIdentifiableInformation.Id;
+                writeFileLogic = new WriteFileLogic();
+                
+                writeFileLogic.listBloodGlucose.Add(bloodGlucose);
+
+                writeFileLogic.personallyIdentifiableInformation = new PersonallyIdentifiableInformation(readFileLogic.personallyIdentifiableInformation);
+
+                foreach (BloodGlucose bloodGlucose1 in readFileLogic.listBloodGlucose)
+                {
+                    writeFileLogic.listBloodGlucose.Add(new BloodGlucose(bloodGlucose1));
+                }
+                foreach (PulseAndOxygen pulseAndOxygen1 in readFileLogic.listPulseAndOxygen)
+                {
+                    writeFileLogic.listPulseAndOxygen.Add(new PulseAndOxygen(pulseAndOxygen1));
+                }
+                writeFileLogic.PathName = path;
+                writeFileLogic.FileName = fileName;
+                pathFileName = writeFileLogic.GetFormattedFileName();
+                writeFileLogic.WriteFile();
+                LoadChart();
+                this.Cursor = Cursors.Default;
+
+            }
         }
 
         private void bloodGlucoseChartForm_Load(object sender, EventArgs e)

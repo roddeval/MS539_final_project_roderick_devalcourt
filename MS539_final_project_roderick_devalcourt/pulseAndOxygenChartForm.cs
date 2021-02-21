@@ -27,8 +27,43 @@ namespace MS539_final_project_roderick_devalcourt
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            pulseAndOxygenForm dlg = new pulseAndOxygenForm();
+            string path = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.DefaultPath;
+            string fileName = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.FileName;
+            pulseAndOxygenForm dlg = null;
+            PulseAndOxygen pulseAndOxygen = null;
+            WriteFileLogic writeFileLogic = null;
+            string pathFileName = "";
+
+            dlg = new pulseAndOxygenForm();
             dlg.ShowDialog(this);
+            if (dlg.DialogResult == DialogResult.OK)
+            {
+                this.Cursor = Cursors.WaitCursor;
+                //save here
+                pulseAndOxygen = new PulseAndOxygen(dlg.pulseAndOxygen);
+                pulseAndOxygen.PII_ID = readFileLogic.personallyIdentifiableInformation.Id;
+
+                writeFileLogic = new WriteFileLogic();
+
+                writeFileLogic.listPulseAndOxygen.Add(pulseAndOxygen);
+
+                writeFileLogic.personallyIdentifiableInformation = new PersonallyIdentifiableInformation(readFileLogic.personallyIdentifiableInformation);
+
+                foreach (BloodGlucose bloodGlucose1 in readFileLogic.listBloodGlucose)
+                {
+                    writeFileLogic.listBloodGlucose.Add(new BloodGlucose(bloodGlucose1));
+                }
+                foreach (PulseAndOxygen pulseAndOxygen1 in readFileLogic.listPulseAndOxygen)
+                {
+                    writeFileLogic.listPulseAndOxygen.Add(new PulseAndOxygen(pulseAndOxygen1));
+                }
+                writeFileLogic.PathName = path;
+                writeFileLogic.FileName = fileName;
+                pathFileName = writeFileLogic.GetFormattedFileName();
+                writeFileLogic.WriteFile();
+                LoadChart();
+                this.Cursor = Cursors.Default;
+            }
         }
 
         private void pulseAndOxygenChartForm_Load(object sender, EventArgs e)

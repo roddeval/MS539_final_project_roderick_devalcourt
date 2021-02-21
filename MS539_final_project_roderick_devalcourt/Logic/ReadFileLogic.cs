@@ -48,9 +48,9 @@ namespace MS539_final_project_roderick_devalcourt.Logic
 
                 formattedDate = now.ToString("yyyyMMdd");
 
-                listBloodGlucoseToday = listBloodGlucose.Where(x => string.Compare(x.DateRead.ToString("yyyyMMdd"),formattedDate)>=0).ToList();
+                listBloodGlucoseToday = listBloodGlucose.Where(x => string.Compare(x.DateRead.ToString("yyyyMMdd"),formattedDate)==0).ToList();
 
-                listPulseAndOxygenToday = listPulseAndOxygen.Where(x => string.Compare(x.DateRead.ToString("yyyyMMdd"), formattedDate) >= 0).ToList();
+                listPulseAndOxygenToday = listPulseAndOxygen.Where(x => string.Compare(x.DateRead.ToString("yyyyMMdd"), formattedDate) == 0).ToList();
 
 
                 formattedDate = nowMinus7.ToString("yyyyMMdd");
