@@ -104,13 +104,42 @@ namespace MS539_final_project_roderick_devalcourt
                             readFileLogic.ReadFile();
                             readFileLogic.SetupListsByDay();
 
-                            if (readFileLogic.listBloodGlucoseLast30Days != null)
+
+                            if (rbLast30Days.Checked == true)
                             {
-                                foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseLast30Days)
+                                if (readFileLogic.listBloodGlucoseLast30Days != null)
                                 {
+                                    foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseLast30Days)
+                                    {
 
-                                    chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+                                        chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
 
+                                    }
+                                }
+                            }
+                            if (rbLast7Days.Checked == true)
+                            {
+                                if (readFileLogic.listBloodGlucoseLast30Days != null)
+                                {
+                                    foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseLast7Days)
+                                    {
+
+                                        chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+
+                                    }
+                                }
+                            }
+
+                            if (rbToday.Checked == true)
+                            {
+                                if (readFileLogic.listBloodGlucoseToday != null)
+                                {
+                                    foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseToday)
+                                    {
+
+                                        chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+
+                                    }
                                 }
                             }
                         }
