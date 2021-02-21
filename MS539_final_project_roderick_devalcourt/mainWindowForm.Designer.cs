@@ -36,6 +36,8 @@
             this.healthInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bloodGlucoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pulseOxygenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testReadFileLogicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +46,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.personallyIdentifiableInformationToolStripMenuItem,
-            this.healthInformationToolStripMenuItem});
+            this.healthInformationToolStripMenuItem,
+            this.administrationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -63,14 +66,14 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -93,16 +96,31 @@
             // bloodGlucoseToolStripMenuItem
             // 
             this.bloodGlucoseToolStripMenuItem.Name = "bloodGlucoseToolStripMenuItem";
-            this.bloodGlucoseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bloodGlucoseToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.bloodGlucoseToolStripMenuItem.Text = "&Blood Glucose";
             this.bloodGlucoseToolStripMenuItem.Click += new System.EventHandler(this.bloodGlucoseToolStripMenuItem_Click);
             // 
             // pulseOxygenToolStripMenuItem
             // 
             this.pulseOxygenToolStripMenuItem.Name = "pulseOxygenToolStripMenuItem";
-            this.pulseOxygenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pulseOxygenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.pulseOxygenToolStripMenuItem.Text = "&Pulse and Oxygen";
             this.pulseOxygenToolStripMenuItem.Click += new System.EventHandler(this.pulseOxygenToolStripMenuItem_Click);
+            // 
+            // administrationToolStripMenuItem
+            // 
+            this.administrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testReadFileLogicToolStripMenuItem});
+            this.administrationToolStripMenuItem.Name = "administrationToolStripMenuItem";
+            this.administrationToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.administrationToolStripMenuItem.Text = "Administration";
+            // 
+            // testReadFileLogicToolStripMenuItem
+            // 
+            this.testReadFileLogicToolStripMenuItem.Name = "testReadFileLogicToolStripMenuItem";
+            this.testReadFileLogicToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testReadFileLogicToolStripMenuItem.Text = "Test ReadFileLogic";
+            this.testReadFileLogicToolStripMenuItem.Click += new System.EventHandler(this.testReadFileLogicToolStripMenuItem_Click);
             // 
             // mainWindowForm
             // 
@@ -132,6 +150,8 @@
         private System.Windows.Forms.ToolStripMenuItem healthInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bloodGlucoseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pulseOxygenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testReadFileLogicToolStripMenuItem;
     }
 }
 

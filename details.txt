@@ -12,8 +12,19 @@ The health information this program will collect and display are:
 2.	Blood Glucose readings
 3.	Pulse and Oxygen % readings
 
-github repository
-https://github.com/roddeval/MS539_final_project_roderick_devalcourt
+2/14/2021
+
+	Overview:
+	Some of the things you should be considering include:
+
+	Classes - at least 3
+	Inheritance - at least 2 inherited classes.
+	Encapsulation
+	Polymorphism
 
 youtube video portion of the assignment
-https://youtu.be/v41iMu-GYwo
+https://youtu.be/bjF4TcVpXIY
+
+Github link:
+https://github.com/roddeval/MS539_final_project_roderick_devalcourt/tree/feb_14_2021_branch
+

@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MS539_final_project_roderick_devalcourt.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\temp\</Value>
+    </Setting>
+    <Setting Name="FileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HealthInformationTracker.txt</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
