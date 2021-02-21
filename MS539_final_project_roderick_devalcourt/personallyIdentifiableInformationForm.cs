@@ -33,6 +33,7 @@ namespace MS539_final_project_roderick_devalcourt
             result = checkInputs();
             if (result == true)
             {
+
                 //MessageBox.Show("Form would be saved at this point...");
                 writeFileLogic = new WriteFileLogic();
 
