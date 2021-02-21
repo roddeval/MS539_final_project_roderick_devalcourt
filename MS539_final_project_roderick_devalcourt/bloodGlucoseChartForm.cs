@@ -16,6 +16,7 @@ namespace MS539_final_project_roderick_devalcourt
 {
     public partial class bloodGlucoseChartForm : Form
     {
+        ReadFileLogic readFileLogic { set; get; }
         public bloodGlucoseChartForm()
         {
             InitializeComponent();
@@ -40,7 +41,6 @@ namespace MS539_final_project_roderick_devalcourt
             Exception exceptionDetails = null;
             string path = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.DefaultPath;
             string fileName = MS539_final_project_roderick_devalcourt.Properties.Settings.Default.FileName;
-            ReadFileLogic readFileLogic = null;
 
             try
             {
@@ -68,14 +68,16 @@ namespace MS539_final_project_roderick_devalcourt
                         if (File.Exists(readFileLogic.FilePathName) == true)
                         {
                             readFileLogic.ReadFile();
+                            readFileLogic.SetupListsByDay();
 
-
-                            foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucose)
+                            if (readFileLogic.listBloodGlucoseLast30Days != null)
                             {
+                                foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseLast30Days)
+                                {
 
-                                chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+                                    chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
 
-
+                                }
                             }
                         }
 
@@ -102,11 +104,72 @@ namespace MS539_final_project_roderick_devalcourt
                 messageText = stringBuilder.ToString();
 
                 System.Diagnostics.Debug.WriteLine(messageText);
+                MessageBox.Show(this, messageText, "Error");
 
             }
 
 
         }
 
+        private void rbLast30Days_Click(object sender, EventArgs e)
+        {
+            chart1.Series.Clear();
+
+            chart1.Series.Add("BloodGlucose");
+            chart1.Series["BloodGlucose"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chart1.Series["BloodGlucose"].Color = Color.Green;
+            chart1.Series["BloodGlucose"].XValueType = ChartValueType.Time;
+
+            if (readFileLogic.listBloodGlucoseLast30Days != null)
+            {
+                foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseLast30Days)
+                {
+
+                    chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+
+                }
+            }
+
+        }
+
+        private void rbLast7Days_Click(object sender, EventArgs e)
+        {
+            chart1.Series.Clear();
+
+            chart1.Series.Add("BloodGlucose");
+            chart1.Series["BloodGlucose"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chart1.Series["BloodGlucose"].Color = Color.Green;
+            chart1.Series["BloodGlucose"].XValueType = ChartValueType.Time;
+
+            if (readFileLogic.listBloodGlucoseLast7Days != null)
+            {
+                foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseLast7Days)
+                {
+
+                    chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+
+                }
+            }
+        }
+
+        private void rbToday_Click(object sender, EventArgs e)
+        {
+            chart1.Series.Clear();
+
+            chart1.Series.Add("BloodGlucose");
+            chart1.Series["BloodGlucose"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chart1.Series["BloodGlucose"].Color = Color.Green;
+            chart1.Series["BloodGlucose"].XValueType = ChartValueType.Time;
+
+            if (readFileLogic.listBloodGlucoseToday != null)
+            {
+                foreach (BloodGlucose bloodGlucose in readFileLogic.listBloodGlucoseToday)
+                {
+
+                    chart1.Series["BloodGlucose"].Points.AddXY(bloodGlucose.TimeRead.ToOADate(), bloodGlucose.MGDL);
+
+                }
+            }
+        }
     }
 }

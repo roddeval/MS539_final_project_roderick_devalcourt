@@ -35,6 +35,11 @@ Date            hours of work       Description
                                     EncryptedTextBuilder.cs
 
 2/19/2021       2.50                bloodGlucoseChartForm (got a basic line chart with testdata to show)
+2/21/2021       0.5                 pulseAndOxygenChartForm.cs
+2/21/2021       0.5                 readFileLogic.cs added method SetupListsByDay
+2/21/2021       0.5                 pulseAndOxygenChartForm.cs (got a basic line chart with testdata to show)
+2/21/2021       0.25                pulseAndOxygenChartForm.cs (added group box for today, this week, this month)
+2/21/2021       0.25                bloodGlucoseChartForm.cs (added group box for today, this week, this month)
 
  */
 using System;
