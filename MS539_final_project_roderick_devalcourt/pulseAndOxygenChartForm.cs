@@ -112,17 +112,54 @@ namespace MS539_final_project_roderick_devalcourt
                             readFileLogic.ReadFile();
                             readFileLogic.SetupListsByDay();
 
-                            if (readFileLogic.listPulseAndOxygenLast30Days != null)
+                            if (rbLast30Days.Checked == true)
                             {
-                                foreach (PulseAndOxygen pulseAndOxygen in readFileLogic.listPulseAndOxygenLast30Days)
+                                if (readFileLogic.listPulseAndOxygenLast30Days != null)
                                 {
+                                    foreach (PulseAndOxygen pulseAndOxygen in readFileLogic.listPulseAndOxygenLast30Days)
+                                    {
 
 
 
-                                    chart1.Series["Pulse"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Pulse);
-                                    chart1.Series["Oxygen"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Oxygen);
+                                        chart1.Series["Pulse"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Pulse);
+                                        chart1.Series["Oxygen"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Oxygen);
 
 
+                                    }
+                                }
+                            }
+
+                            if (rbLast7Days.Checked == true)
+                            {
+                                if (readFileLogic.listPulseAndOxygenLast7Days != null)
+                                {
+                                    foreach (PulseAndOxygen pulseAndOxygen in readFileLogic.listPulseAndOxygenLast7Days)
+                                    {
+
+
+
+                                        chart1.Series["Pulse"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Pulse);
+                                        chart1.Series["Oxygen"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Oxygen);
+
+
+                                    }
+                                }
+                            }
+                            
+                            if (rbToday.Checked == true)
+                            {
+                                if (readFileLogic.listPulseAndOxygenToday != null)
+                                {
+                                    foreach (PulseAndOxygen pulseAndOxygen in readFileLogic.listPulseAndOxygenToday)
+                                    {
+
+
+
+                                        chart1.Series["Pulse"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Pulse);
+                                        chart1.Series["Oxygen"].Points.AddXY(pulseAndOxygen.TimeRead.ToOADate(), pulseAndOxygen.Oxygen);
+
+
+                                    }
                                 }
                             }
                         }

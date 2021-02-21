@@ -156,6 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 226);
+            this.ControlBox = false;
             this.Controls.Add(this.genderGroupBox);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.cancelButton);
@@ -170,6 +171,7 @@
             this.Name = "personallyIdentifiableInformationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personally Identifiable InformationForm";
+            this.Load += new System.EventHandler(this.personallyIdentifiableInformationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.genderGroupBox.ResumeLayout(false);
             this.genderGroupBox.PerformLayout();
