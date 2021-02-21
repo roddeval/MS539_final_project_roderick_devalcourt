@@ -12,7 +12,7 @@ The health information this program will collect and display are:
 2.	Blood Glucose readings
 3.	Pulse and Oxygen % readings
 
-2/14/2021
+2/21/2021
 
 	Overview:
 	Some of the things you should be considering include:
